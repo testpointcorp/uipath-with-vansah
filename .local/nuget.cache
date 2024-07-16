@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pMOmacwS7Vt7edz2MTY4r9spLSueOo8P0otoy43kqoQCSqZ5JA9B1KABDVhPrJQVZZFoeZa8RATvywHhbvTZoA==",
+  "dgSpecHash": "EzxV4tL9977ux0xyTL3/6BsmeIsCpHMELu0qNsWzg5TM1EMvhL4ydyKiwckW18BNY4ythWQsz9q5FxacDHqvCA==",
   "success": true,
   "projectFilePath": "C:\\Users\\onesh\\OneDrive\\Documents\\GitHub\\uipath-with-vansah\\.local\\",
   "expectedPackageFiles": [
@@ -283,7 +283,8 @@
     "C:\\Users\\onesh\\.nuget\\packages\\uipath.uiautomation.activities\\24.10.0\\uipath.uiautomation.activities.24.10.0.nupkg.sha512",
     "C:\\Users\\onesh\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\uipath.uiautomation.activities.runtime.24.10.0.nupkg.sha512",
     "C:\\Users\\onesh\\.nuget\\packages\\uipath.uiautomation.activities.runtime.design\\24.10.0\\uipath.uiautomation.activities.runtime.design.24.10.0.nupkg.sha512",
-    "C:\\Users\\onesh\\.nuget\\packages\\uipath.vision\\3.13.2\\uipath.vision.3.13.2.nupkg.sha512"
+    "C:\\Users\\onesh\\.nuget\\packages\\uipath.vision\\3.13.2\\uipath.vision.3.13.2.nupkg.sha512",
+    "C:\\Users\\onesh\\.nuget\\packages\\vansah.sendresults.activities\\1.0.198-dev.707\\vansah.sendresults.activities.1.0.198-dev.707.nupkg.sha512"
   ],
   "logs": []
 }

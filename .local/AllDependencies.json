@@ -5637,6 +5637,15 @@
           "lib/net6.0-windows7.0/UiPath.Vision.Tesseract.dll": {},
           "lib/net6.0-windows7.0/UiPath.Vision.dll": {}
         }
+      },
+      "Vansah.SendResults.Activities/1.0.198-dev.707": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/Vansah.SendResults.Activities.dll": {}
+        }
       }
     },
     "net8.0-windows7.0/win-x64": {
@@ -11145,6 +11154,15 @@
           "lib/net6.0-windows7.0/UiPath.Vision.GoogleCloud.dll": {},
           "lib/net6.0-windows7.0/UiPath.Vision.Tesseract.dll": {},
           "lib/net6.0-windows7.0/UiPath.Vision.dll": {}
+        }
+      },
+      "Vansah.SendResults.Activities/1.0.198-dev.707": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/Vansah.SendResults.Activities.dll": {}
         }
       }
     }
@@ -21712,6 +21730,17 @@
         "uipath.vision.3.13.2.nupkg.sha512",
         "uipath.vision.nuspec"
       ]
+    },
+    "Vansah.SendResults.Activities/1.0.198-dev.707": {
+      "sha512": "h22GNOaTEbQ2ei8Hpz3JYaogFAvhgZh5YIKqg6wvC4iVMQmbkwL0+3Ah4OFkmXKO92xp7AWAtV1Si88ZVZDHHw==",
+      "type": "package",
+      "path": "vansah.sendresults.activities/1.0.198-dev.707",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net6.0/Vansah.SendResults.Activities.dll",
+        "vansah.sendresults.activities.1.0.198-dev.707.nupkg.sha512",
+        "vansah.sendresults.activities.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -21721,7 +21750,8 @@
       "UiPath.Mail.Activities >= 1.23.1 <= 1.23.1",
       "UiPath.System.Activities >= 24.10.3 <= 24.10.3",
       "UiPath.Testing.Activities >= 24.10.0 <= 24.10.0",
-      "UiPath.UIAutomation.Activities >= 24.10.0 <= 24.10.0"
+      "UiPath.UIAutomation.Activities >= 24.10.0 <= 24.10.0",
+      "Vansah.SendResults.Activities >= 1.0.198-dev.707 <= 1.0.198-dev.707"
     ]
   },
   "packageFolders": {
@@ -21762,6 +21792,11 @@
             "include": "Runtime",
             "target": "Package",
             "version": "[24.10.0, 24.10.0]"
+          },
+          "Vansah.SendResults.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.0.198-dev.707, 1.0.198-dev.707]"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Users\\onesh\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
