@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="806,609.3333333333334" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:vsa="clr-namespace:Vansah.SendResults.Activities;assembly=Vansah.SendResults.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1149.3333333333333,474.66666666666674" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:swa="clr-namespace:System.Windows.Automation;assembly=UIAutomationTypes" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uue="clr-namespace:UiPath.UIAutomationNext.Exceptions;assembly=UiPath.UIAutomationNext" xmlns:vsa="clr-namespace:Vansah.SendResults.Activities;assembly=Vansah.SendResults.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -43,6 +43,8 @@
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Windows.Automation</x:String>
+      <x:String>UiPath.UIAutomationNext.Exceptions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -109,60 +111,145 @@
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UIAutomationClient</AssemblyReference>
+      <AssemblyReference>UIAutomationTypes</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Test-C2" sap:VirtualizedContainerService.HintSize="500.6666666666667,541.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Test-C2" sap:VirtualizedContainerService.HintSize="516.6666666666666,822.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438.6666666666667,453.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="454.6666666666667,734.6666666666666" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Default="passed" Name="vansahResult" />
+        <Variable x:TypeArguments="x:String" Name="testResult">
+          <Variable.Default>
+            <Literal x:TypeArguments="x:String">passed</Literal>
+          </Variable.Default>
+        </Variable>
       </TryCatch.Variables>
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Selenium Website Testing Page – Use this page to automate" sap:VirtualizedContainerService.HintSize="452.6666666666667,532.6666666666666" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="203d8f35-e51e-49cd-923b-4d2ebea5f3d3" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home | Vansah Test Management" sap:VirtualizedContainerService.HintSize="546,1373.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="203d8f35-e51e-49cd-923b-4d2ebea5f3d3" Version="V2" WindowResize="Maximize">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,313.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <Sequence sap:VirtualizedContainerService.HintSize="512,1154" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Try Now'" sap:VirtualizedContainerService.HintSize="354,222.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="203d8f35-e51e-49cd-923b-4d2ebea5f3d3" Version="V3">
-                  <uix:NClick.Target>
-                    <uix:TargetAnchorable BrowserURL="https://selenium.vansah.io/" CVScreenId="5d2d3f86-858e-4c80-b7b6-8fb310be6924" CvElementArea="895, 1400, 195, 79" CvTextArea="939, 1428, 107, 31" CvTextArgument="Try Now" CvType="Button" DesignTimeRectangle="944, 1428, 100, 27" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl class='elementor-button-text' parentid='vansah-trynow' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='elementor-button-text' parentid='vansah-trynow' tag='SPAN' type='' aaname='Try Now' check:innerText='Try Now' /&gt;" Guid="635329e1-728d-4db2-bf87-7646889212da" InformativeScreenshot="c679052c7b4fcc9c06281f2577870f7a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Selenium Website Testing Page – Use this page to automate' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
-                  </uix:NClick.Target>
-                  <uix:NClick.VerifyOptions>
-                    <uix:VerifyExecutionOptions DisplayName="Input 'marketplace.atlassian.c…'" Mode="Appears">
-                      <uix:VerifyExecutionOptions.Retry>
-                        <InArgument x:TypeArguments="x:Boolean" />
-                      </uix:VerifyExecutionOptions.Retry>
-                      <uix:VerifyExecutionOptions.Target>
-                        <uix:TargetAnchorable BrowserURL="https://marketplace.atlassian.com/apps/1224250/vansah-test-management-for-jira?tab=overview&amp;hosting=cloud" CVScreenId="4e8c94dd-237a-4a18-811e-f8f279f95205" CvElementArea="188, 79, 1955, 52" CvType="InputBox" DesignTimeRectangle="246, 87, 1846, 37" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='Atlassian Marketplace - Google Chrome - Shubham' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Atlassian Marketplace - Google Chrome - Shubham' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' automationid='' /&gt;" Guid="5c017996-f3ce-4ecb-94da-b03074693c76" InformativeScreenshot="9afde297dd48171abcb0a11515e5706d.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Atlassian Marketplace - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
-                      </uix:VerifyExecutionOptions.Target>
-                      <uix:VerifyExecutionOptions.Timeout>
-                        <InArgument x:TypeArguments="x:Double" />
-                      </uix:VerifyExecutionOptions.Timeout>
-                    </uix:VerifyExecutionOptions>
-                  </uix:NClick.VerifyOptions>
-                </uix:NClick>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1063.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="vansahOpens" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:UiElementExists DisplayName="Element Exists 'P'" sap:VirtualizedContainerService.HintSize="388,139.33333333333334" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                    <ui:UiElementExists.Exists>
+                      <OutArgument x:TypeArguments="x:Boolean">
+                        <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">vansahOpens</CSharpReference>
+                      </OutArgument>
+                    </ui:UiElementExists.Exists>
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bc6a352e-a492-4182-89ea-6d1b56424d97" InformativeScreenshot="87add8cf948a9ce6da7e984438d556e0" Selector="&lt;webctrl css-selector='body&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h1&amp;gt;p' tag='P' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="388,272.6666666666667" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Version="V3">
+                    <uix:NMouseScroll.SearchedElement>
+                      <uix:SearchedElement>
+                        <uix:SearchedElement.Target>
+                          <uix:TargetAnchorable BrowserURL="https://vansah.com/" CVScreenId="ea9ebbd8-c6a1-4455-abff-1f0ab99d4f02" CvElementArea="939, 560, 374, 84" CvTextArea="1011, 589, 183, 23" CvTextArgument="BOOK A DEMO" CvType="Button" DesignTimeRectangle="943, 564, 369, 77" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Book a Demo    ' class='custom-btn' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Book a Demo    ' class='custom-btn' tag='A' type='' check:innerText='BOOK A DEMO' /&gt;" Guid="cc4f6cf0-8d6e-4182-acbb-466851839491" InformativeScreenshot="b5bbd5d8b4272508da22e0f8b860a165.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home | Vansah Test Management' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                        </uix:SearchedElement.Target>
+                        <uix:SearchedElement.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:SearchedElement.Timeout>
+                      </uix:SearchedElement>
+                    </uix:NMouseScroll.SearchedElement>
+                  </uix:NMouseScroll>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="388,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f9de7945-c178-43f1-9805-b302d4b504df" InformativeScreenshot="66b4739e74f14d44b833e38a5b33ef6c" Selector="&lt;webctrl aaname='Book a Demo    ' class='custom-btn' tag='A' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="388,124" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="388,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c82e2548-f028-4dba-b9a4-5fc99cd43fad" InformativeScreenshot="4f83e91886064c8757f5f85bc6b72b5b" Selector="&lt;webctrl src='https://calendly.com/fadihawli/vansah4jira?embed_domain=vansah.com&amp;amp;embed_type=Inline' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='24' tableRow='5' tag='SPAN' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'BUTTON'" sap:VirtualizedContainerService.HintSize="388,132.66666666666666" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="aa844e33-a9d4-4a85-8dc8-e02362cb6e37" InformativeScreenshot="0d00445a695a057b4da1944df047c891" Selector="&lt;html app='chrome.exe' title='Request a Vansah Test Management for Jira Demo | Vansah Test Management' /&gt;&lt;webctrl src='https://calendly.com/fadihawli/vansah4jira?embed_domain=vansah.com&amp;amp;embed_type=Inline' tag='IFRAME' /&gt;&lt;webctrl aaname='10:00am' tag='BUTTON' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                </Sequence>
               </Sequence>
             </ActivityAction>
           </uix:NApplicationCard.Body>
           <uix:NApplicationCard.TargetApp>
-            <uix:TargetApp Area="-11, -11, 2582, 1550" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="936bf5d36082ceda21e55809fba5260f.jpg" Selector="&lt;html app='chrome.exe' title='Selenium Website Testing Page – Use this page to automate' /&gt;" Title="Selenium Website Testing Page – Use this page to automate" Url="https://selenium.vansah.io/" />
+            <uix:TargetApp Area="-11, -11, 1942, 1150" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="87807065a9416a852d111f320fe29958.jpg" Selector="&lt;html app='chrome.exe' title='Home | Vansah Test Management' /&gt;" Title="Selenium Website Testing Page – Use this page to automate" Url="https://vansah.com/" />
           </uix:NApplicationCard.TargetApp>
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.6666666666667,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="420.6666666666667,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -173,10 +260,56 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
-                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">vansahResult</CSharpReference>
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">testResult</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">failed</InArgument>
+              </Assign.Value>
+            </Assign>
+          </ActivityAction>
+        </Catch>
+        <Catch x:TypeArguments="swa:ElementNotAvailableException" sap:VirtualizedContainerService.HintSize="420.6666666666667,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="swa:ElementNotAvailableException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="swa:ElementNotAvailableException" Name="exception" />
+            </ActivityAction.Argument>
+            <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">testResult</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">failed</InArgument>
+              </Assign.Value>
+            </Assign>
+          </ActivityAction>
+        </Catch>
+        <Catch x:TypeArguments="uue:UiAutomationException" sap:VirtualizedContainerService.HintSize="420.6666666666667,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="uue:UiAutomationException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="uue:UiAutomationException" Name="exception" />
+            </ActivityAction.Argument>
+            <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">testResult</CSharpReference>
                 </OutArgument>
               </Assign.To>
               <Assign.Value>
@@ -187,13 +320,25 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <vsa:ActivityTemplate ApiUrl="{x:Null}" VansahToken="{x:Null}" AssetKey="Test-6" DisplayName="Sending Results to Vansah" sap:VirtualizedContainerService.HintSize="334,191.33333333333334" sap2010:WorkflowViewState.IdRef="ActivityTemplate_1" SelectedOperation="Activate" TestCaseKey="Test-c3" TestEnv="UAT" TestSprint="SM Sprint 1" TestVersion="Release 24">
-          <vsa:ActivityTemplate.TestResult>
+        <Sequence sap:VirtualizedContainerService.HintSize="416,426" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <vsa:ActivityTemplate ApiUrl="{x:Null}" TestEnv="{x:Null}" TestSprint="{x:Null}" TestVersion="{x:Null}" VansahToken="{x:Null}" AssetKey="AS-3" DisplayName="Sending Results to Vansah" sap:VirtualizedContainerService.HintSize="354,223.33333333333334" sap2010:WorkflowViewState.IdRef="ActivityTemplate_2" SelectedOperation="Activate" TestCaseKey="AS-C8">
+            <vsa:ActivityTemplate.TestResult>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">testResult</CSharpValue>
+              </InArgument>
+            </vsa:ActivityTemplate.TestResult>
+          </vsa:ActivityTemplate>
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,114.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_1">
             <InArgument x:TypeArguments="x:String">
-              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">vansahResult</CSharpValue>
+              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"The results is logged in Vansah as "+testResult</CSharpValue>
             </InArgument>
-          </vsa:ActivityTemplate.TestResult>
-        </vsa:ActivityTemplate>
+          </WriteLine>
+        </Sequence>
       </TryCatch.Finally>
     </TryCatch>
   </Sequence>

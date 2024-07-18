@@ -5638,7 +5638,7 @@
           "lib/net6.0-windows7.0/UiPath.Vision.dll": {}
         }
       },
-      "Vansah.SendResults.Activities/1.0.198-dev.707": {
+      "Vansah.SendResults.Activities/1.0.198-dev.638": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {}
@@ -11156,7 +11156,7 @@
           "lib/net6.0-windows7.0/UiPath.Vision.dll": {}
         }
       },
-      "Vansah.SendResults.Activities/1.0.198-dev.707": {
+      "Vansah.SendResults.Activities/1.0.198-dev.638": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {}
@@ -21731,14 +21731,14 @@
         "uipath.vision.nuspec"
       ]
     },
-    "Vansah.SendResults.Activities/1.0.198-dev.707": {
-      "sha512": "h22GNOaTEbQ2ei8Hpz3JYaogFAvhgZh5YIKqg6wvC4iVMQmbkwL0+3Ah4OFkmXKO92xp7AWAtV1Si88ZVZDHHw==",
+    "Vansah.SendResults.Activities/1.0.198-dev.638": {
+      "sha512": "BeeiEasuSIZkWDoeeUodwxFI0Kw48DlM9pBzp+O04gmEUfUiGXiAuWDABSj72CLsbrIsxqOon7bdEE1E1rHxtQ==",
       "type": "package",
-      "path": "vansah.sendresults.activities/1.0.198-dev.707",
+      "path": "vansah.sendresults.activities/1.0.198-dev.638",
       "files": [
         ".nupkg.metadata",
         "lib/net6.0/Vansah.SendResults.Activities.dll",
-        "vansah.sendresults.activities.1.0.198-dev.707.nupkg.sha512",
+        "vansah.sendresults.activities.1.0.198-dev.638.nupkg.sha512",
         "vansah.sendresults.activities.nuspec"
       ]
     }
@@ -21751,19 +21751,19 @@
       "UiPath.System.Activities >= 24.10.3 <= 24.10.3",
       "UiPath.Testing.Activities >= 24.10.0 <= 24.10.0",
       "UiPath.UIAutomation.Activities >= 24.10.0 <= 24.10.0",
-      "Vansah.SendResults.Activities >= 1.0.198-dev.707 <= 1.0.198-dev.707"
+      "Vansah.SendResults.Activities >= 1.0.198-dev.638 <= 1.0.198-dev.638"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\onesh\\.nuget\\packages\\": {}
+    "C:\\Users\\merin\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "uipath-with-vansah",
       "projectName": "uipath-with-vansah",
-      "projectPath": "C:\\Users\\onesh\\OneDrive\\Documents\\GitHub\\uipath-with-vansah\\.local",
-      "packagesPath": "C:\\Users\\onesh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\onesh\\OneDrive\\Documents\\GitHub\\uipath-with-vansah\\.local"
+      "projectPath": "C:\\Users\\merin\\OneDrive\\文档\\GitHub\\uipath-with-vansah\\.local",
+      "packagesPath": "C:\\Users\\merin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\merin\\OneDrive\\文档\\GitHub\\uipath-with-vansah\\.local"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -21796,10 +21796,10 @@
           "Vansah.SendResults.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.0.198-dev.707, 1.0.198-dev.707]"
+            "version": "[1.0.198-dev.638, 1.0.198-dev.638]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\onesh\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\merin\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
