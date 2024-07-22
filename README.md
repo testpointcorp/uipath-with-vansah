@@ -7,7 +7,6 @@ This Sample UiPath process opens up [Vansah.com](https://vansah.com/) in Chrome 
  
 -  UiPath Extension is installed in your Chrome browser.
 -  Vansah.SendResults.Activities.nupkg is installed in your process.
-  <img src="Nupackage_v1.02.png" alt="image" width="50%" height="auto">
 
 -  ## Step-by-Step Instructions for execution
 
@@ -15,7 +14,7 @@ This Sample UiPath process opens up [Vansah.com](https://vansah.com/) in Chrome 
 - Open `Main.xaml` with UiPath Studio.
 - Locate `Send Results to Vansah` activity in the sequence.
   
- <img src="SendActivity.png" alt="image" width="50%" height="auto">
+  ![UiPath with Vansah Sample Process](/asset/Send_Results.png)
 - Update the following fields in the activity.
 
     1. **Asset Key**: The Jira Issue Key or Test Folder ID. ( "Test-6" or "b97fe80b-0b6a-11ee-8e52-5658ef8eadd5")
@@ -23,7 +22,7 @@ This Sample UiPath process opens up [Vansah.com](https://vansah.com/) in Chrome 
     3. **Test Result**: The result of the test (e.g., "Passed" or "Failed").
     4. Set **Operation** status to `Activate` in **Properties**.
     
-   <img src="vansahProperties.png" alt="image" width="50%" height="auto">
+   ![UiPath with Vansah Sample Process](/asset/Send_Results_Activity_property.png)
 
        
 - Provide the following optional fields if required in the 'Properties'. 
