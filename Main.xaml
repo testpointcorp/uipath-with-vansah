@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1149.3333333333333,474.66666666666674" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:swa="clr-namespace:System.Windows.Automation;assembly=UIAutomationTypes" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uue="clr-namespace:UiPath.UIAutomationNext.Exceptions;assembly=UiPath.UIAutomationNext" xmlns:vsa="clr-namespace:Vansah.SendResults.Activities;assembly=Vansah.SendResults.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1019.3333333333335,887.3333333333334" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:swa="clr-namespace:System.Windows.Automation;assembly=UIAutomationTypes" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uue="clr-namespace:UiPath.UIAutomationNext.Exceptions;assembly=UiPath.UIAutomationNext" xmlns:vsa="clr-namespace:Vansah.SendResults.Activities;assembly=Vansah.SendResults.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -125,11 +125,7 @@
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="454.6666666666667,734.6666666666666" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Default="passed" Name="vansahResult" />
-        <Variable x:TypeArguments="x:String" Name="testResult">
-          <Variable.Default>
-            <Literal x:TypeArguments="x:String">passed</Literal>
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="x:String" Default="passed" Name="testResult" />
       </TryCatch.Variables>
       <TryCatch.Try>
         <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home | Vansah Test Management" sap:VirtualizedContainerService.HintSize="546,1373.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="203d8f35-e51e-49cd-923b-4d2ebea5f3d3" Version="V2" WindowResize="Maximize">
@@ -326,7 +322,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <vsa:ActivityTemplate ApiUrl="{x:Null}" TestEnv="{x:Null}" TestSprint="{x:Null}" TestVersion="{x:Null}" VansahToken="{x:Null}" AssetKey="AS-3" DisplayName="Sending Results to Vansah" sap:VirtualizedContainerService.HintSize="354,223.33333333333334" sap2010:WorkflowViewState.IdRef="ActivityTemplate_2" SelectedOperation="Activate" TestCaseKey="AS-C8">
+          <vsa:ActivityTemplate ApiUrl="{x:Null}" TestEnv="{x:Null}" TestSprint="{x:Null}" TestVersion="{x:Null}" VansahToken="{x:Null}" AssetKey="Test-6" DisplayName="Sending Results to Vansah" sap:VirtualizedContainerService.HintSize="354,223.33333333333334" sap2010:WorkflowViewState.IdRef="ActivityTemplate_2" SelectedOperation="Activate" TestCaseKey="Test-c3">
             <vsa:ActivityTemplate.TestResult>
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">testResult</CSharpValue>
