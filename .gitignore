@@ -1,0 +1,31 @@
+# Logs and temporary files
+*.local
+*.cache
+*.logs
+*.tmp
+
+# Publish-related files
+*.nupkg
+
+# Settings and configuration files
+UiPath.settings
+project.json
+
+# Local NuGet packages
+.local
+.nuget
+
+# User-specific files
+*.user
+*.suo
+
+# Output folders
+Output/
+
+# Backup files
+*.bak
+.objects/.metadata
+/.objects
+/.settings
+/.project
+/.tmh
