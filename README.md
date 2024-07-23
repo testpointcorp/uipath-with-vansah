@@ -13,13 +13,18 @@ In this example, a browser is launched to navigate to [Vansah.com](https://vansa
  ### Step-by-Step Instructions for execution
  
  1. Download project from [this](https://github.com/testpointcorp/uipath-with-vansah/) repo or Open your Existing Process in UIPath Studio.
+
+  ![Main](/asset/Main.png)
+    
  2. In order to send results to Vansah, we need to download Vansah Send Results Activity from `Manage Packages`.
-  ![Vansah_PackageManager](asset/Package_Manager.png)
- 3. Search `Send Results to Vansah` activity and add it to your Sequence
+  
+  ![Search Package](asset/Search_Package.png)
+ 
+ 3. Search `Vansah` activity and add it to your Sequence .
 
- ![UiPath with Vansah Sample Process](/asset/Search_Activity.png)
+  ![Search Activity](/asset/Search_Activity.png)
 
-> Note :  Use Try, Catch and finally block to send results to Vansah on failure of your sequence. 
+  > Note :  Use Try, Catch and finally block to send results to Vansah on failure of your sequence. 
 
  4.Update Vansah Configuration.
 
@@ -29,15 +34,22 @@ In this example, a browser is launched to navigate to [Vansah.com](https://vansa
   - **Token**: Leave blank to use the environment variable option to store the token with the name `VANSAH_TOKEN`, or provide your token directly here.
   > Note :
   > Using environment variables in your system is more secure than providing sensitive information directly in your Activity.
+ 
+   ![Vansah Configuration](/asset/Vansah_Config.png)
+
+   
  5. Update the following fields in the activity.
     1. **Asset Key**: The Jira Issue Key or Test Folder ID. ( "Test-6" or "b97fe80b-0b6a-11ee-8e52-5658ef8eadd5")
     2. **Test Case Key**: The Vansah Test Case Key (e.g., "TEST-C1").
     3. **Test Result**: The result of the test (e.g., "Passed" or "Failed").
     4. Set **Operation** status to `Activate` in **Properties**.
     
-   ![UiPath with Vansah Sample Process](/asset/Send_Results_Activity_property.png)
+   ![Required Fields](/asset/Required_Options.png)
  
  6. Provide the following optional fields if required in the 'Properties'.
+
+   ![Required Fields](/asset/Test_Run_Properties.png)
+  
  7. Execute Main.xaml file and verify whether the results are logged in Vansah Test Management app from the Output Console.
 
    ![UiPath with Vansah Sample Process](/asset/Console.png)
@@ -46,8 +58,9 @@ In this example, a browser is launched to navigate to [Vansah.com](https://vansa
 ## Troubleshooting
 
 - Ensure all required fields are filled out correctly.
+- Make sure to set the Operation field as Activate.
 - Verify the format of the `Test Case Key` and `Asset Key`.
-- Make sure the `Test Result` is either **Passed** or **Failed**.
+- Make sure the `Test Result` is either "Passed" or "Failed".
 - If there are issues with the authentication, check the `Token` and `API URL` if they are customized.
 
 
