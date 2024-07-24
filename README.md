@@ -1,6 +1,6 @@
 ## UiPath Integration with Vansah Test Management for Jira
 
-This guide demonstrates the process of integrating Vansah Send Results Activity into your basic workflow in Studio and executing it on your machine. 
+This guide demonstrates the process of integrating Vansah into your basic workflow in UiPath Studio. 
 
 In this example, a browser is launched to navigate to [Vansah.com](https://vansah.com/), proceed to the Book A Demo page to select a specific timeslot for a demo, and concurrently log the test result in the Vansah Test Management App.
 
