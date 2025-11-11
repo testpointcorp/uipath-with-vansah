@@ -8,7 +8,7 @@ In this example, a browser is launched to navigate to [Vansah.com](https://vansa
 - UiPath Studio is installed.
 - UiPath Extension is installed in your Chrome browser.
 - [`Vansah`](https://marketplace.atlassian.com/apps/1224250/vansah-test-management-for-jira?tab=overview&hosting=cloud) is installed in your Jira workspace.
-- Vansah [`Connect`](https://docs.vansah.com/docs-base/generate-a-vansah-api-token-from-jira-cloud/) token is obtained and stored in the Environment variable named: `VANSAH_TOKEN`
+- Vansah [`Connect`](https://help.vansah.com/en/articles/9824979-generate-a-vansah-api-token-from-jira) token is obtained and stored in the Environment variable named: `VANSAH_TOKEN`
 
  ### Step-by-Step Instructions for execution
  
